@@ -10,7 +10,8 @@ body {background-color: white;}
 #p01   {color: blue;
 font-family: helvetica;
 text-align: center;
-margin-top: 0.5em;}
+margin-top: 0.5em;
+margin-bottom: 1em;}
 img.displayed{
 	margin-top: 2em;
 	display: block;
@@ -24,6 +25,23 @@ img.displayed{
 
 <h1 id="h1nsa">Pitch</h1>
 <p id="p01">An Ode to Entrepreneurship</p>
+
+
+
+<div id="map" style="width:100%;height:500px"></div>
+
+<script>
+function myMap() {
+  var mapCanvas = document.getElementById("map");
+  var mapOptions = {
+    center: new google.maps.LatLng(51.5, -0.2), 
+    zoom: 10
+  }
+  var map = new google.maps.Map(mapCanvas, mapOptions);
+}
+</script>
+
+<script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
 
 </body>
 </html>
